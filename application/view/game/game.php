@@ -24,12 +24,9 @@ function initialize() {
 		draggable: true,
 		title: 'your guess'
 	});
-	console.log(marker.getPosition());
 	$(document).ready(function(){
 		$("button").click(function(){
 			var position=marker.getPosition();
-				console.log (position["k"]);
-				console.log(position['D']);
 			$.post("<?php echo URL ."game/getLongLat/" . $this->id ; ?>",
 				{
 					lat: position["k"],
